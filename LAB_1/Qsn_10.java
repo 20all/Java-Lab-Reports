@@ -14,6 +14,6 @@ public class Qsn_10 {
         n1 = n1 - n2;
         System.out.println("Values after swap:");
         System.out.println("First value: "+n1+"  Second value: "+n2);
-
+        input.close();
     }
 }
