@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class Qsn_8 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int size = 10;
+        System.out.print("How many numbers you want to arrange? ");
+        int size = input.nextInt();
         System.out.println("Enter any "+size+" numbers:");
         int[] n = new int[size];
         for(int i = 0; i < size; i++) {
