@@ -3,12 +3,7 @@ import java.util.Scanner;
 public class Qsn_14 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        // System.out.println("Enter present date(Y/M/D): ");
-        // int presentYear = input.nextInt();
-        // int presentMonth = input.nextInt();
-        // int presentDay = input.nextInt();
-        // System.out.println("Enter your D.O.B.(Y/M/D): ");
-        // Input present date
+        //input present date
         System.out.print("Enter present year: ");
         int presentYear = input.nextInt();
         System.out.print("Enter present month (1-12): ");
@@ -41,6 +36,5 @@ public class Qsn_14 {
             month+=12;
         }
         System.out.println("Your age: "+year+" years, "+month+" months, "+day+" days.");
-
     }
 }

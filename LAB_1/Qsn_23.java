@@ -7,6 +7,5 @@ public class Qsn_23 {
         System.out.println("Sum of all natural numbers upto 50 = "+sum);
         sum = 50*51/2; // using formula sum of n natural numbers = n*(n+1)/2
         System.out.println("Sum of all natural numbers upto 50 = "+sum);
-
     }
 }

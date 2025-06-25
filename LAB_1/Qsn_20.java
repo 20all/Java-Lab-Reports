@@ -13,6 +13,7 @@ public class Qsn_20 {
             if(n[i] < smallest)
                 smallest = n[i];
         }
+        // int smallest = ((n)) ? : ;
         System.out.println(smallest+" is Smallest.");
         input.close();
     }
