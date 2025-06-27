@@ -29,7 +29,6 @@ class Power {
 public class Qsn_17 {
     
     public static void main(String[] args) {
-        // Qsn_17 p = new Qsn_17();
         Power p = new Power();
         p.takeInput();
         p.calculate();
