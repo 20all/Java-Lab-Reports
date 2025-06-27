@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Qsn_16 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int row1 = 3;
+        int row1 = 2;
         int col1 = 3;
         int row2 = col1;
         int col2 = row1;
@@ -27,12 +27,14 @@ public class Qsn_16 {
         for(int i = 0; i < row1; i++) {
             for(int j = 0; j < col2; j++) {
                 int sum = 0;
-                for(int k = 0; k < row1; k++) {
+                for(int k = 0; k < col1; k++) {
                     sum += matrix1[i][k] * matrix2[k][j];
                 }
                 productMatrix[i][j] = sum;
             }
         }
+        System.out.println("Marix 1: "+Arrays.deepToString(matrix1));
+        System.out.println("Marix 2: "+Arrays.deepToString(matrix2));
         // displaying the product matrix
         System.out.println("Matrix Multiplication:");
         for(int[] i : productMatrix) {
