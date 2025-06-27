@@ -22,26 +22,24 @@ public class Qsn_15 {
                 matrix2[i][j] = input.nextInt();
             }
         }
-        int sum = 0;
-        int[][] sumMatrix = new int[row][col]; // initializing sumMatrix
-        // adding two matrices and storing it in sumMatrix
-        for(int i = 0; i < row; i++) {
-            for(int j = 0; j < col; j++) {
-                sum += matrix1[i][j] + matrix2[i][j];
-                sumMatrix[i][j] = sum;
-            }
-        }
-        //displaying sumMatrix
-        System.out.println("Sum of the matrices:");
-        for(int[] e : sumMatrix) {
-            System.out.println(Arrays.toString(e));
-        }
+        // int[][] sumMatrix = new int[row][col]; // initializing sumMatrix
+        // // adding two matrices and storing it in sumMatrix
+        // for(int i = 0; i < row; i++) {
+        //     for(int j = 0; j < col; j++) {
+        //         sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+        //     }
+        // }
+        // //displaying sumMatrix
+        // System.out.println("Sum of the matrices:");
+        // for(int[] e : sumMatrix) {
+        //     System.out.println(Arrays.toString(e));
+        // }
         
         // next approach: without iteration
         int[][] matrixSum = IntStream.range(0, size).mapToObj(i -> IntStream.range(0, size).map(j -> matrix1[i][j] + matrix2[i][j]).toArray()).toArray(int[][]::new); 
         System.out.println("Sum of the matrices:");
         for(int[] i : matrixSum) {
-            System.out.println(Arrays.toString(matrixSum));
+            System.out.println(Arrays.toString(i));
         }
         input.close();
     }
