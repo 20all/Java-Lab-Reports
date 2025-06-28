@@ -1,66 +1,37 @@
+import java.util.Arrays;
+import java.util.stream.IntStream;
 
+class Prime {
+    private int n;
+    Prime(int number) {
+        this.n = number;
+    }
+    void primeGenerator() {
+        // int[] numbers = IntStream.range(2, n).toArray();
+        // int[] primeNumbers;
+        for(int i = 2; i <= n; i++) {
+            int acc = 0;
+            for(int j = 2; j < i; j++) {
+                if(i % j == 0) {
+                    acc++;
+                    break;
+                }
+            }
+            // System.out.print(acc+" ");
+            if(acc == 0) {
+                System.out.print(i+" ");
+            }
+        }
+        // return primeNumbers;
+    }
+}
 public class Qsn_18 {
     public static void main(String[] args) {
-        
+        int n = 100;
+        Prime prime = new Prime(n);
+        System.out.printf("Prime numbers from %d to %d%n:",0,n);
+        prime.primeGenerator();
+        // System.out.println(Arrays.toString(primeNumbers));
     }
 }
 
-
-import java.util.Scanner;
-
-class Power {
-    private double base;
-    private int exponent;
-    
-    // Constructor
-    public Power(double base, int exponent) {
-        this.base = base;
-        this.exponent = exponent;
-    }
-    
-    // Method to calculate power
-    public double calculatePower() {
-        // Handle edge cases
-        if (exponent == 0) {
-            return 1.0;
-        }
-        
-        double result = 1.0;
-        int absExponent = Math.abs(exponent);
-        
-        // Calculate power using iterative multiplication
-        for (int i = 1; i <= absExponent; i++) {
-            result *= base;
-        }
-        
-        // Handle negative exponent
-        if (exponent < 0) {
-            result = 1.0 / result;
-        }
-        
-        return result;
-    }
-}
-
-public class PowerCalculator {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // Input base
-        System.out.print("Enter the base (x): ");
-        double x = scanner.nextDouble();
-        
-        // Input exponent
-        System.out.print("Enter the exponent (n): ");
-        int n = scanner.nextInt();
-        
-        // Create Power object
-        Power power = new Power(x, n);
-        
-        // Calculate and display result
-        double result = power.calculatePower();
-        System.out.println(x + " raised to the power " + n + " is: " + result);
-        
-        scanner.close();
-    }
-}
