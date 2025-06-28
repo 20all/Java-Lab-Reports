@@ -1,37 +1,43 @@
 import java.util.Scanner;
 class Power {
-        int n;
-        int x;
-        int toPower(int x, int n) {
-            for(int i = 1; i <= n; i++) {
-                x *= x;
-            }
-            return x;
+    private double base;
+    private int exponent;
+    // constructor
+    Power(double b, int e) {
+        this.base = b;
+        this.exponent = e;
+    }
+    //method for calculating power
+    public double calculatePower() {
+        // handling the '0' power case
+        if(exponent == 0) {
+            return 1.0;
         }
-        void takeInput() {
-            Scanner input = new Scanner(System.in);
-            System.out.print("Enter the integer: ");
-            x = input.nextInt();
-            System.out.print("Enter its power: ");
-            n = input.nextInt();
-            input.close();
+        double result = 1.0;
+        int absoluteExponent = (exponent < 0) ? -exponent : exponent; // converting -ve to +ve for perfect iteration
+        // int absoluteExponent = Math.abs(exponent);
+        for(int i = 1; i <= absoluteExponent; i++) {
+            result *= base;
         }
-        int ans = 1;
-        void calculate() {
-            for(int i = 1; i <= n; i++) {
-                ans *= x;
-            }
+        // if the exponent is -ve then it should be 1/result
+        if(exponent < 0) { 
+            result = 1.0 / result;
         }
-        void display() {
-            System.out.printf("%d to the power %d = %d%n",x,n,ans);
-        }
+        return result;
+    }
     }
 public class Qsn_17 {
-    
     public static void main(String[] args) {
-        Power p = new Power();
-        p.takeInput();
-        p.calculate();
-        p.display();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the base(x): ");
+        double x = input.nextDouble();
+        System.out.print("Enter the exponent(n): ");
+        int n = input.nextInt();
+        Power power = new Power(x, n);
+        double result = power.calculatePower();
+        System.out.printf("%.2f to the power %d is %.2f%n",x,n,result);
+        input.close();
     }
 }
+
+
