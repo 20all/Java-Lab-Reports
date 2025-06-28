@@ -9,10 +9,10 @@ public class Qsn_2 {
                     break;
                 }
             }
-            System.out.printf(" %d",acc);
-            // if(acc!=0) {
-            //     System.out.printf("%4d",i);
-            // } 
+            // System.out.printf(" %d",acc);
+            if(acc!=0) {
+                System.out.printf("%4d",i);
+            } 
         }
     }
 }
