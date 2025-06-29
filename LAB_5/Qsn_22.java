@@ -67,16 +67,16 @@ public class Qsn_22 {
 
         // creating objects
         Animal genericAnimal = new Animal("Generic");
-        Animal dog = new Dog(d);
-        Animal cat = new Cat(c);
+        Animal dog = new Dog(d); // polymorphic reference
+        Animal cat = new Cat(c); // polymorphic reference
 
         // static binding
-        System.out.println("\n Static Binding Method:");
-        genericAnimal.describe();
-        genericAnimal.describe("wild");
+        System.out.println("\n Static Binding Method(overloading):");
+        genericAnimal.describe(); // calls describe()
+        genericAnimal.describe("wild"); // calls describe(String)
 
         // dynamic binging
-        System.out.println("\n Dynamic Binding Method:");
+        System.out.println("\n Dynamic Binding Method(overriding):");
         System.out.println("Generic Animal:");
         genericAnimal.makeSound();
         genericAnimal.describe();
