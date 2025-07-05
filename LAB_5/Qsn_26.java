@@ -1,8 +1,7 @@
-// interface definition
 
-import java.rmi.dgc.Lease;
 import java.util.Scanner;
 
+// interface definition
 interface Draw {
     void draw(); // abstract method for drawing the shape
     String getDescription(); // abstract method for describing the shape
